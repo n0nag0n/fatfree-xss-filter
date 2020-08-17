@@ -1,0 +1,24 @@
+{
+	"name": "n0nag0n/fatfree-xss-filter",
+    "description": "XSS Filter to properly clean your request data from XSS related attacks.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+		{
+			"name": "Bellegueulle Damien (Dabcorp)",
+            "email": "unknown@example.com"
+		},
+        {
+            "name": "n0nag0n",
+            "email": "n0nag0n@sky-9.com"
+        }
+	],
+	"autoload": {
+        "psr-4": {
+			"n0nag0n\\" : "src/"
+		} 
+    },
+    "require": {
+        "bcosca/fatfree-core": "^3.7"
+    }
+}
