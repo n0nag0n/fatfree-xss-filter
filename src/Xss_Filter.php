@@ -172,12 +172,12 @@ class Xss_Filter extends \Prefab
         /*$this->input = str_replace(array('&amp;', '&lt;', '&gt;'), array('&amp;amp;', '&amp;lt;', '&amp;gt;'), $this->input);*/
         /*$this->input = str_replace(array('&lt;', '&gt;'), array('&amp;amp;', '&amp;lt;', '&amp;gt;'), $this->input);/*/
         if ($this->allow_http_value === false) {
-            $this->input = str_replace(array('&', '%', 'script', 'http', 'localhost'), array('', '', '', '', ''), $this->input);
+            $this->input = str_ireplace(array('&', '%', 'script', 'http', 'localhost'), array('', '', '', '', ''), $this->input);
         } else {
-            $this->input = str_replace(array('&', '%', 'script', 'localhost', '../'), array('', '', '', '', ''), $this->input);
+            $this->input = str_ireplace(array('&', '%', 'script', 'localhost', '../'), array('', '', '', '', ''), $this->input);
         }
         foreach ($this->normal_patterns as $pattern => $replacement) {
-            $this->input = str_replace($pattern, $replacement, $this->input);
+            $this->input = str_ireplace($pattern, $replacement, $this->input);
         }
     }
 
